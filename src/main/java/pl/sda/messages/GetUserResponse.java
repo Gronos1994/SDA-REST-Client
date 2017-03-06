@@ -1,14 +1,13 @@
-package pl.sda.request;
+package pl.sda.messages;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
-import java.util.List;
-
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-public class CreateUserRequest {
+public class GetUserResponse {
     private String name;
     private String login;
     private String mail;
+    private String id;
 
     public String getName() {
         return name;
@@ -32,5 +31,13 @@ public class CreateUserRequest {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
